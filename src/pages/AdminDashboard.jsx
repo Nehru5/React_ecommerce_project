@@ -1,6 +1,8 @@
 import React,{useState, useEffect,useRef} from 'react'
 import { toast } from 'react-toastify'
 import axios from 'axios'
+import { Link, useNavigate } from 'react-router-dom'
+
 
 const AdminDashboard = () => {
   const [id,setId] = useState("")
@@ -11,6 +13,8 @@ const AdminDashboard = () => {
   const [image,setImage] = useState("")
   const [ratings, setRatings] = useState("")
   const inputRef = useRef(null)
+
+  let navigate = useNavigate()
 
   function handleImage(e){
     let file = e.target.files[0]
@@ -46,6 +50,10 @@ const AdminDashboard = () => {
   }
   return (
     <>
+    <div style={{background:"linear-gradient(to right, rgb(5, 153, 5), rgb(138, 245, 138))", height:"75px"}}>
+        <Link to={"/"}><h2>Back to Home page</h2></Link>
+    </div>
+    <button onClick={()=>{navigate("/addedproducts")}}>View Added Products</button>
       <center><h1>Welcome to Dashboard</h1></center>
 
       <center>Add Products</center>
