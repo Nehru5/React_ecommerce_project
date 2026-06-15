@@ -6,6 +6,7 @@ import AddedProducts from "./pages/AddedProducts"
 import UserDashboard from './pages/UserDashboard'
 import UserLogin from './pages/UserLogin'
 import UserSignup from './pages/UserSignup'
+import ProductDetail from './pages/ProductDetail'
 import {Routes, Route} from "react-router-dom"
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path='/usersignup' element={<UserSignup/>}/>
         <Route path='/userlogin' element={<UserLogin/>}/>
         <Route path='/userdashboard' element={<UserDashboard/>}/>
+        <Route path='/productdetail/:id' element={<ProductDetail/>}/>
       </Routes> 
     </>
   )

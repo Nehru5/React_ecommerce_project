@@ -9,6 +9,9 @@
   width: 100%;
   background:linear-gradient(to right, rgb(5, 153, 5), rgb(138, 245, 138));
   margin-bottom: 30px;
+  /* top: 20;
+  position: fixed;
+  z-index: 1; */
 }
 .right{
   display: flex;
